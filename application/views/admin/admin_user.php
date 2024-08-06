@@ -10,7 +10,7 @@
     <script src="<?php echo base_url('bootstrap/js/bootstrap.min.js'); ?>"></script>
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
 
-    <title>Kelola Admin</title>
+    <title> T-Vote | Kelola Admin</title>
 
 	<style>
         * {
@@ -257,8 +257,8 @@
         
 			<a href="<?php echo base_url('EventVote'); ?>" class="menu-item">Kelola Event Vote</a>
 			<a href="<?php echo base_url('admin/pembelian'); ?>" class="menu-item">Kelola Pembelian</a>
-            <a href="<?php echo base_url('admin/admin_user'); ?>" class="menu-item active">Kelola Pengguna</a>
-			<a href="<?php echo base_url('admin/admin_voters'); ?>" class="menu-item">Kelola Voters</a>
+            <a href="<?php echo base_url('admin/admin_user'); ?>" class="menu-item active">Kelola Admin</a>
+			<a href="<?php echo base_url('admin/admin_voters'); ?>" class="menu-item">Kelola User</a>
             <a href="<?php echo base_url('admin/hasil_voting'); ?>" class="menu-item">Hasil Voting</a>
 
             <!-- <a class="menu-item2">Token : <?php echo $jumlah_token; ?></a> -->

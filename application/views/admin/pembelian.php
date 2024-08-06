@@ -191,8 +191,8 @@
         <div class="menu">
             <a href="<?php echo base_url('EventVote'); ?>" class="menu-item">Kelola Event Vote</a>
             <a href="<?php echo base_url('admin/pembelian'); ?>" class="menu-item active">Kelola Pembelian</a>
-            <a href="<?php echo base_url('admin/admin_user'); ?>" class="menu-item">Kelola Pengguna</a>
-			<a href="<?php echo base_url('admin/admin_voters'); ?>" class="menu-item">Kelola Voters</a>
+            <a href="<?php echo base_url('admin/admin_user'); ?>" class="menu-item">Kelola Admin</a>
+			<a href="<?php echo base_url('admin/admin_voters'); ?>" class="menu-item">Kelola User</a>
             <a href="<?php echo base_url('admin/hasil_voting'); ?>" class="menu-item">Hasil Voting</a>
         </div>
         <a href="<?php echo base_url('auth/login_admin'); ?>" class="menu-item logout-button"><i class="mdi mdi-logout" style="margin-right: 10px;"></i>Keluar</a>

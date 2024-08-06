@@ -288,7 +288,7 @@ class Admin extends CI_Controller {
 
                 if ($this->KandidatEventVoteModel->edit_KandidatEventVote($id, $data)) {
                     // Jika penambahan berhasil, arahkan kembali ke halaman daftar kandidat
-                    redirect('admin/EventVote');
+                    redirect('EventVote');
                 } else {
                     // Jika penambahan gagal, tampilkan pesan error
                     $data['error'] = 'Edit kandidat gagal. Silakan coba lagi.';

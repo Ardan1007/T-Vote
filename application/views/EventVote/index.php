@@ -199,6 +199,8 @@
 
         .btn-primary {
             background-color: #007bff; 
+			/* font-size: 16px;
+			padding: 5px 20px; */
         }
 
         .btn-primary:hover {
@@ -220,8 +222,8 @@
 			color: #ffffff;
 			text-decoration: none;
 			border-radius: 30px;
-			padding: 10px 30px; 
-			font-size: 18px;
+			padding: 5px 30px; 
+			font-size: 16px;
 			font-weight: bold;
 			margin-top: 10px;
 			display: inline-block; 
@@ -336,8 +338,8 @@
             <div class="menu">
                 <a href="<?php echo base_url('admin/EventVote'); ?>" class="menu-item active">Kelola Event Vote</a>
                 <a href="<?php echo base_url('admin/pembelian'); ?>" class="menu-item">Kelola Pembelian</a>
-                <a href="<?php echo base_url('admin/admin_user'); ?>" class="menu-item">Kelola Pengguna</a>
-				<a href="<?php echo base_url('admin/admin_voters'); ?>" class="menu-item">Kelola Voters</a>
+                <a href="<?php echo base_url('admin/admin_user'); ?>" class="menu-item">Kelola Admin</a>
+				<a href="<?php echo base_url('admin/admin_voters'); ?>" class="menu-item">Kelola User</a>
                 <a href="<?php echo base_url('admin/hasil_voting'); ?>" class="menu-item">Hasil Voting</a>
             </div>
             <a href="<?php echo base_url('auth/login_admin'); ?>" class="menu-item logout-button"><i class="mdi mdi-logout" style="margin-right: 10px;"></i>Keluar</a>
@@ -413,7 +415,7 @@
 										<td><?php echo $k['visi_misi']; ?></td>
 										<td>
 										<div class="btn-group">
-											<a href="<?php echo base_url('admin/editKandidatEventVote/'.$k['id']); ?>" class="btn-edit btn-primary">Edit</a>
+											<a href="<?php echo base_url('admin/editKandidatEventVote/'.$k['id']); ?>" class="btn-edit btn-primary">Ubah</a>
 											<a href="<?php echo base_url('admin/hapusKandidatEventVote/'.$k['id']); ?>" class="btn-hapus btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus kandidat ini?')">Hapus</a>
 										</div>
 										</td>

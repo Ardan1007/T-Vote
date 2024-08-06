@@ -11,7 +11,7 @@
     <script src="<?php echo base_url('bootstrap/js/bootstrap.min.js'); ?>"></script>
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
 
-    <title>E Voting | Voters</title>
+    <title>T-Vote | Voters</title>
 
 	<style>
         * {
@@ -268,14 +268,14 @@
 		<div class="menu">
 			<a href="<?php echo base_url('EventVote'); ?>" class="menu-item">Kelola Event Vote</a>
 			<a href="<?php echo base_url('admin/pembelian'); ?>" class="menu-item">Kelola Pembelian</a>
-			<a href="<?php echo base_url('admin/admin_user'); ?>" class="menu-item">Kelola Pengguna</a>
-			<a href="<?php echo base_url('admin/admin_voters'); ?>" class="menu-item active">Kelola Voters</a>
+			<a href="<?php echo base_url('admin/admin_user'); ?>" class="menu-item">Kelola Admin</a>
+			<a href="<?php echo base_url('admin/admin_voters'); ?>" class="menu-item active">Kelola User</a>
 			<a href="<?php echo base_url('admin/hasil_voting'); ?>" class="menu-item">Hasil Voting</a>
 		</div>
 		<a href="<?php echo base_url('auth/login_admin'); ?>" class="menu-item logout-button"><i class="mdi mdi-logout" style="margin-right: 10px;"></i>Keluar</a>
 	</div>
 
-	<div class="container mt-5">
+	<div class="container">
 		<h2 style="font-weight: bold;">Kelola Voters</h2>
 		<table id="admin_voters" class="table">
 			<thead>

@@ -75,7 +75,7 @@
 <div class="main">
 	<div class="container mt-5">
 		<div class="header">
-            <a href="<?php echo base_url('EventVote'); ?>" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+            <a href="<?php echo base_url('admin/EventVote'); ?>" class="back-icon"><i class="fas fa-arrow-left"></i></a>
             <h2 class="card-title" style="font-weight: bold;">Edit Event Vote</h2>
         </div>
 		
@@ -95,7 +95,7 @@
 				<input type="text" class="form-control" name="deskripsi" value="<?php echo set_value('deskripsi', $EventVote['deskripsi']); ?>">
 			</div>
 
-			<!-- Anda bisa tambahkan form untuk upload foto kandidat di sini -->
+			
 			<button type="submit" class="btn">Simpan</button>
 			
 		<?php echo form_close(); ?>
