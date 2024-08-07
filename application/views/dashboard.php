@@ -92,10 +92,10 @@
             height: 50px;
         }
         .header .btn {
-            background-color: #FFFFFF;
+            background-color: transparent;
             border: 1.5px solid #FFFFFF;
             border-radius: 30px;
-            color: #000000;
+            color: #FFFFFF;
             padding: 10px 30px;
             font-size: 1em;
             font-weight: bold;
@@ -104,7 +104,7 @@
         .header .btn:hover {
             background-color: #FFFFFF;
             transform: scale(1);
-            color: #9FC743;
+            color: #000000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
     </style>

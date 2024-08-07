@@ -11,7 +11,7 @@
     <script src="<?php echo base_url('bootstrap/js/bootstrap.min.js'); ?>"></script>
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
 
-    <title>E Voting | Pembelian</title>
+    <title>T-Vote | Pembelian</title>
 
 	<style>
         * {
@@ -164,6 +164,11 @@
 			text-decoration: none; 
         }
 
+		.btn-validasi {
+			background-color: #000000;
+			color: #ffffff;
+		}
+
 		.dataTables_wrapper .dataTables_scrollHead {
             overflow: visible !important;
         }
@@ -235,7 +240,7 @@
 								</td>
 								<td>
 									<?php if ($p['status_validasi'] != 1): ?>
-										<a href="<?php echo base_url('admin/validasi_pembayaran/'.$p['id_pembelian']); ?>" class="btn btn-primary">Validasi Pembayaran</a>
+										<a href="<?php echo base_url('admin/validasi_pembayaran/'.$p['id_pembelian']); ?>" class="btn btn-validasi">Validasi</a>
 									<?php elseif ($p['status_validasi'] == 1): ?>
 										<a href="" class="btn btn-success">Validated</a>
 									<?php endif; ?>

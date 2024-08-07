@@ -62,12 +62,12 @@
             background-color: #000000;
             color: #ffffff;
             border: none;
-            padding: 15px;
+            padding: 10px;
             margin: 10px 0;
             border-radius: 30px;
             text-decoration: none;
             text-align: center;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             width: 100%;
         }
@@ -185,7 +185,7 @@
             color: #ffffff;
             border-radius: 30px;
             padding: 5px 50px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
 			margin-left: 300px;
         }
@@ -223,12 +223,13 @@
         <div class="menu">
             <a href="<?php echo base_url('Voting'); ?>" class="menu-item active"> <i class="fas fa-vote-yea" style="margin-right: 10px;"></i>Vote</a>
             <a href="<?php echo base_url('pembelian/beli_token'); ?>" class="menu-item "> <i class="fas fa-shopping-cart" style="margin-right: 10px;"></i>Beli Token</a>
+			<a class="menu-item2">Token : <?php echo $jumlah_token; ?></a>
         </div>
         <a href="<?php echo base_url('auth/logout'); ?>" class="menu-item logout-button"><i class="mdi mdi-logout" style="margin-right: 10px;"></i>Keluar</a>
     </div>
 	<div class="main">
         <div class="header">
-            <span>Welcome, <?php echo $this->session->userdata('username'); ?></span> 
+            <span>Selamat Datang, <?php echo $this->session->userdata('username'); ?></span> 
             <div class="profile-circle"></div>
         </div>
 		<div class="container mt-5">
@@ -268,7 +269,7 @@
 										echo '</div>';
 									?>
 								<div class="mt-4">
-									<button type="submit" class="btn btn-custom">Vote</button>
+									<button type="submit" class="btn">Vote</button>
 								</div>
 							<?php echo form_close(); ?>
 						</div>

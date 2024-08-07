@@ -10,7 +10,7 @@
     <script src="<?php echo base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
     <script src="<?php echo base_url('bootstrap/js/bootstrap.min.js'); ?>"></script>
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
-    <title>E Voting | Login</title>
+    <title>T-Vote | Masuk Admin</title>
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;

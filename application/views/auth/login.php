@@ -11,7 +11,7 @@
 		<script src="<?php echo base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 		<script src="<?php echo base_url('bootstrap/js/bootstrap.min.js'); ?>"></script>
 		<script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
-		<title>E Voting | Login</title>
+		<title>T-Voting | Masuk</title>
 	<style>
 		body {
 			font-family: 'Plus Jakarta Sans', sans-serif;
@@ -50,8 +50,8 @@
 		.card-title {
 			font-weight: 800;
 			font-size: 25px;
-			margin-left: 80px;
-			margin-right: 130px;
+			margin-left: 100px;
+			margin-right: 140px;
 		}
 		.form-control {
 			border-radius: 30px;

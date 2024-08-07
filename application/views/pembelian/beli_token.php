@@ -58,12 +58,12 @@
             background-color: #000000;
             color: #ffffff;
             border: none;
-            padding: 15px;
+            padding: 10px;
             margin: 10px 0;
             border-radius: 30px;
             text-decoration: none;
             text-align: center;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             width: 100%;
         }
@@ -80,11 +80,11 @@
 
         .menu-item2 {
             color: #000000;
-            padding: 15px;
+            padding: 10px;
             margin: 10px 0;
             text-decoration: none;
             text-align: center;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
         }
 
@@ -175,7 +175,7 @@
         .form-control {
             border: none;
             border-radius: 30px;
-            padding: 15px;
+            padding: 10px;
             background-color: #F5F7F8;
             font-size: 1.1em;
             color: #C4C4C4;
@@ -193,20 +193,21 @@
         }
 
         .btn {
-            background-color: #ffffff;
+            background-color: #000000;
             border: none;
+			font-size: 16px;
 			margin-top: 20px;
             border-radius: 30px;
-            padding: 10px 50px;
+            padding: 5px 50px;
             font-size: 1.2em;
-            color: #000000;
+            color: #ffffff;
             font-weight: bold;
         }
 
         .btn:hover {
             transform: scale(1);
             background-color: #000000;
-            color: #85C400;
+            color: #9FC743;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
@@ -234,7 +235,7 @@
     
     <div class="container mt-5">
         <div class="header">
-            <span>Welcome, <?php echo $this->session->userdata('username'); ?></span> 
+            <span>Selamat Datang, <?php echo $this->session->userdata('username'); ?></span> 
             <div class="profile-circle"></div>
         </div>
         <div class="row">

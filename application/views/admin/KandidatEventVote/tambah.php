@@ -11,7 +11,7 @@
     <script src="<?php echo base_url('bootstrap/js/bootstrap.min.js'); ?>"></script>
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
 
-    <title>E Voting | Tambah Kandidat</title>
+    <title>T-Vote | Tambah Kandidat</title>
 </head>
 <body>
 <div class="container mt-5">

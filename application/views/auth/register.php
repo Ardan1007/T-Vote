@@ -14,7 +14,7 @@
     <!-- Tambahkan Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-    <title>E Voting | Register</title>
+    <title>T-Vote | Daftar</title>
 
 	<style>
         body {
@@ -119,31 +119,31 @@
 					<div class="card-body">
 						<form>
                             <div class="mb-3">
-                                <label for="username" class="form-label">Username:</label>
-                                <input type="text" name="username" class="form-control" value="<?php echo set_value('username'); ?>">
+                                <label for="username" class="form-label">Nama</label>
+                                <input type="text" name="username" class="form-control" placeholder="Masukan Nama" value="<?php echo set_value('username'); ?>">
                             </div>
                             <div class="mb-3">
-                                <label for="password" class="form-label">Password:</label>
-                                <input type="password" name="password" class="form-control">
+                                <label for="password" class="form-label">Kata Sandi</label>
+                                <input type="password" name="password" class="form-control" placeholder="Masukan Kata Sandi">
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email:</label>
-                                <input type="email" name="email" class="form-control" value="<?php echo set_value('email'); ?>">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" name="email" class="form-control" placeholder="Masukan Email" value="<?php echo set_value('email'); ?>">
                             </div>
                             <div class="mb-3">
-                                <label for="nama" class="form-label">Nama:</label>
-                                <input type="text" name="nama" class="form-control" value="<?php echo set_value('nama'); ?>">
+                                <label for="nama" class="form-label">Nama Akun</label>
+                                <input type="text" name="nama" class="form-control" placeholder="Masukan Nama Akun" value="<?php echo set_value('nama'); ?>">
                             </div>
                             <div class="mb-3">
-                                <label for="no_hp" class="form-label">No Handphone:</label>
-                                <input type="text" name="no_hp" class="form-control" value="<?php echo set_value('no_hp'); ?>">
+                                <label for="no_hp" class="form-label">No Handphone</label>
+                                <input type="text" name="no_hp" class="form-control" placeholder="Masukan No. Handphone" value="<?php echo set_value('no_hp'); ?>">
                             </div>
                             <div class="mb-3">
-                                <label for="tgl_lahir" class="form-label">Tanggal Lahir:</label>
+                                <label for="tgl_lahir" class="form-label">Tanggal Lahir</label>
                                 <input type="date" name="tgl_lahir" class="form-control" value="<?php echo set_value('tgl_lahir'); ?>">
                             </div>
                             <div class="mb-3">
-                                <label for="pertanyaan" class="form-label">Pertanyaan Konfirmasi Keamanan:</label>
+                                <label for="pertanyaan" class="form-label">Pertanyaan Konfirmasi Keamanan</label>
                                 <select name="pertanyaan" class="form-control" id="pertanyaan">
                                     <option value="">-- Pilih Jawaban --</option>
                                     <option value="Apa nama hewan peliharaan pertama Anda?" <?php echo set_value('pertanyaan') == 'Apa nama hewan peliharaan pertama Anda?' ? 'selected' : ''; ?>>Apa nama hewan peliharaan pertama Anda?</option>
@@ -153,8 +153,8 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="jawaban" class="form-label">Jawaban Konfirmasi Keamanan:</label>
-                                <input type="text" name="jawaban" class="form-control" value="<?php echo set_value('jawaban'); ?>">
+                                <label for="jawaban" class="form-label">Jawaban Konfirmasi Keamanan</label>
+                                <input type="text" name="jawaban" class="form-control" placeholder="Masukan Konfirmasi Keamanan" value="<?php echo set_value('jawaban'); ?>">
                             </div>
 
                             <div class="mb-5">

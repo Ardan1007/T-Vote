@@ -6,13 +6,13 @@
     <link href="<?php echo base_url('uploads/icon/evt.png'); ?>" rel="icon" type="image/x-icon">
     <link href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.min.css" rel="stylesheet">
     <link href="<?php echo base_url('bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="<?php echo base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
     <script src="<?php echo base_url('bootstrap/js/bootstrap.min.js'); ?>"></script>
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
 
-    <title>E Voting | Email Reset</title>
+    <title>T-Vote | Email Reset</title>
 
 <style>
     body {
@@ -51,9 +51,9 @@
     }
     .card-title {
         font-weight: 800;
-        font-size: 25px;
-        margin-left: 80px;
-        margin-right: 130px;
+        font-size: 16px;
+        margin-left: 60px;
+        margin-right: 115px;
     }
     .form-control {
         border-radius: 30px;
@@ -142,7 +142,7 @@
             <div class="card-body">
                 <div class="header">
                     <a href="<?php echo base_url('auth/login'); ?>" class="back-icon"><i class="fas fa-arrow-left"></i></a>
-                    <h2 class="card-title">Masuk</h2>
+                    <h2 class="card-title">Lupa Kata Sandi</h2>
                 </div>
                 <?php if(validation_errors() == TRUE): ?>
                     <div class="alert alert-danger" role="alert"><?php echo validation_errors(); ?></div>
@@ -153,7 +153,7 @@
                 <?php echo form_open('auth/confirmuser'); ?>
                     <div class="mb-3">
                         <label for="email" class="form-label">Masukkan Email</label>
-                        <input type="text" name="email" class="form-control" value="<?php echo set_value('email'); ?>">
+                        <input type="text" name="email" class="form-control" placeholder="Masukan Email" value="<?php echo set_value('email'); ?>">
                     </div>
                     <div class="mb-3 mt-5">
                         <button type="submit" class="btn btn-custom">Konfirmasi</button>

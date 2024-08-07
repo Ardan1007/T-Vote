@@ -11,7 +11,7 @@
     <script src="<?php echo base_url('bootstrap/js/bootstrap.min.js'); ?>"></script>
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
 
-    <title>E Voting | Event Vote</title>
+    <title>T-Vote | Event Vote</title>
 
 	<style>
         * {

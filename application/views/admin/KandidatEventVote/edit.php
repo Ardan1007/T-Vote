@@ -12,7 +12,7 @@
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
 
-    <title>E Voting | Edit Kandidat</title>
+    <title>T-Vote | Edit Kandidat</title>
 
 	<style>
         body, html {
