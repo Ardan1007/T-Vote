@@ -266,7 +266,7 @@
                         	<?php if(isset($error)) echo $error; ?>
                         	<?php if(isset($success)) echo $success; ?>
                             <div class="button-container">
-                                <button type="submit" class="btn btn-primary">Beli</button>
+                                <button type="submit" class="btn ">Beli</button>
                             </div>
                         </form>
                     </div>

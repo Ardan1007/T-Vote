@@ -100,13 +100,13 @@
 		}
 		.error-message {
 			color: red;
-			margin-top: 0px; /* Atur jarak antara pesan error dan tombol */
+			margin-top: 0px; 
 			text-align: center;
 		}
 		.text-center {
 			margin-top: 5px;
 		}
-		/* Loader Styles */
+		
 		.loader-wrapper {
 			position: fixed;
 			top: 0;

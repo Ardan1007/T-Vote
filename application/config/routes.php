@@ -81,7 +81,7 @@ $route['admin/tambahKandidatEventVote'] = 'admin/tambahKandidatEventVote';
 $route['admin/editKandidatEventVote/(:num)'] = 'admin/editKandidatEventVote/$1'; 
 $route['admin/hapusKandidatEventVote/(:num)'] = 'admin/hapusKandidatEventVote/$1';
 $route['admin/pembelian'] = 'admin/pembelian'; 
-$route['admin/admin-user'] = 'admin/admin_user';
+$route['admin/admin_user'] = 'admin/admin_user';
 $route['admin/hasil_voting'] = 'admin/hasil_voting';
 $route['admin/validasi_pembayaran/(:num)'] = 'admin/validasi_pembayaran/$1'; 
 

@@ -39,7 +39,7 @@ class Admin_user extends CI_Controller {
 
             if ($this->Admin_user_model->register($data)) {
                 // Jika penambahan user admin berhasil, arahkan kembali ke halaman kelola pengguna admin
-                redirect('admin_user');
+                redirect('admin/admin_user');
             } else {
                 // Jika penambahan user admin gagal, tampilkan pesan error
                 $data['error'] = 'Penambahan user admin gagal. Silakan coba lagi.';
@@ -52,7 +52,7 @@ class Admin_user extends CI_Controller {
     public function hapus($id_admin) {
         if ($this->Admin_user_model->delete($id_admin)) {
             // Jika penghapusan user admin berhasil, arahkan kembali ke halaman kelola pengguna admin
-            redirect('admin_user');
+            redirect('admin/admin_user');
         } else {
             // Jika penghapusan user admin gagal, tampilkan pesan error
             $data['error'] = 'Penghapusan user admin gagal. Silakan coba lagi.';

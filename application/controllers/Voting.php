@@ -72,11 +72,11 @@ class Voting extends CI_Controller {
                 }else{
                     $data['error'] = 'Token anda tidak cukup untuk melakukan votings.';
 					
-                    $this->load->view('voting/index', $data);
+                    $this->load->view('voting', $data);
                 }
             }else{
                 $data['error'] = 'Token anda tidak cukup untuk melakukan voting. <br> <b>Harap cek kembali Token anda. Jika Token anda sudah terisi tetapi tidak bisa melakukan voting harap melakukan Logout lalu Login kembali</b>';
-                $this->load->view('voting/index', $data);
+                $this->load->view('voting', $data);
             }
         }
     }

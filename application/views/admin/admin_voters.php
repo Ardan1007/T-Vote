@@ -251,8 +251,8 @@
 		thead {
 			position: sticky;
 			top: 0;
-			background-color: #fff; /* Atur warna background header */
-			z-index: 1; /* Memastikan header berada di atas konten lainnya */
+			background-color: #fff; 
+			z-index: 1; 
 		}
 
 	</style>

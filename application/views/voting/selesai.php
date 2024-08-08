@@ -58,7 +58,7 @@
 			<div class="col-md-8 mx-auto">
 				<h3>Terima Kasih Telah Melakukan Voting</h3>
 				<a href="<?php echo base_url('Voting'); ?>" class="btn">Kembali</a>
-				<a href="<?php echo base_url('voting/index'); ?>" class="btn ">Voting Lagi</a>
+				<a href="<?php echo base_url('voting'); ?>" class="btn ">Voting Lagi</a>
 			</div>
 		</div>
 	</div>

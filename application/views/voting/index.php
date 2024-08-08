@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
 
 
-    <title>E Voting | Vote</title>
+    <title>T-Vote | Vote</title>
 
 	<style>
         * {
@@ -262,13 +262,13 @@
 											echo '<div class="form-check kandidat-item mb-5" data-id-kategori-event-vote="' . $item['id_kategori_event_vote'] . '">';
 											echo '<input class="form-check-input" type="radio" name="id_kandidat" value="' . $item['id'] . '" id="kandidat' . $item['id'] . '">';
 											echo '<p>' . $item['nama'] . '</p>';
-											echo '<img src="../foto_kandidat/' . $item['foto_kandidat'] . '" width="250" height="300" alt="' . $item['nama'] . '">';
+											echo '<img src="' . base_url('foto_kandidat/' . $item['foto_kandidat']) . '" width="100" height="100" alt="' . $item['nama'] . '">';
 											echo '<p>Visi Misi: ' . $item['visi_misi'] . '</p>';
 											echo '</div>';
 										}
 										echo '</div>';
 									?>
-								<div class="mt-4">
+								<div class="">
 									<button type="submit" class="btn">Vote</button>
 								</div>
 							<?php echo form_close(); ?>

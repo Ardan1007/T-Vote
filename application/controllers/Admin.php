@@ -134,7 +134,7 @@ class Admin extends CI_Controller {
 
             if ($this->EventVoteModel->tambah_kategori_event_vote($data)) {
                 // Jika penambahan berhasil, arahkan kembali ke halaman daftar EventVote
-                redirect('admin/EventVote');
+                redirect('EventVote');
             } else {
                 // Jika penambahan gagal, tampilkan pesan error
                 $data['error'] = 'Penambahan Event Vote gagal. Silakan coba lagi.';
@@ -168,7 +168,7 @@ class Admin extends CI_Controller {
 
             if ($this->EventVoteModel->edit_kategori_event_vote($id, $data)) {
                 // Jika pengeditan berhasil, arahkan kembali ke halaman daftar EventVote
-                redirect('admin/EventVote');
+                redirect('EventVote');
             } else {
                 // Jika pengeditan gagal, tampilkan pesan error
                 $data['error'] = 'Pengeditan Event Vote gagal. Silakan coba lagi.';
@@ -187,7 +187,7 @@ class Admin extends CI_Controller {
         // Lakukan proses penghapusan EventVote
         if ($this->EventVoteModel->hapus_kategori_event_vote($id)) {
             // Jika penghapusan berhasil, arahkan kembali ke halaman daftar EventVote
-            redirect('admin/EventVote');
+            redirect('EventVote');
         } else {
             // Jika penghapusan gagal, tampilkan pesan error
             $data['error'] = 'Penghapusan Event Vote gagal. Silakan coba lagi.';
@@ -233,7 +233,7 @@ class Admin extends CI_Controller {
 
                 if ($this->KandidatEventVoteModel->tambah_KandidatEventVote($data)) {
                     // Jika penambahan berhasil, arahkan kembali ke halaman daftar kandidat
-                    redirect('admin/EventVote');
+                    redirect('EventVote');
                 } else {
                     // Jika penambahan gagal, tampilkan pesan error
                     $data['error'] = 'Penambahan kandidat gagal. Silakan coba lagi.';
@@ -314,7 +314,7 @@ class Admin extends CI_Controller {
         // Lakukan proses penghapusan kandidat
         if ($this->KandidatEventVoteModel->hapus_KandidatEventVote($id)) {
             // Jika penghapusan berhasil, arahkan kembali ke halaman daftar kandidat
-            redirect('admin/EventVote');
+            redirect('EventVote');
         } else {
             // Jika penghapusan gagal, tampilkan pesan error
             $data['error'] = 'Penghapusan kandidat gagal. Silakan coba lagi.';

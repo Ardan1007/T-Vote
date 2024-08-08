@@ -198,7 +198,7 @@
         }
 
         .btn-primary {
-            background-color: #007bff; 
+            background-color: #000000; 
 			/* font-size: 16px;
 			padding: 5px 20px; */
         }
@@ -320,129 +320,128 @@
 		thead {
 			position: sticky;
 			top: 0;
-			background-color: #fff; /* Atur warna background header */
-			z-index: 1; /* Memastikan header berada di atas konten lainnya */
+			background-color: #fff; 
+			z-index: 1; 
 		}
 
     </style>
 
 </head>
 <body>
-
-
-<div class="main">
+    <div class="main">
         <div class="sidebar">
             <div class="logo">
-                <img src="./assets/logo.png" alt="T-Vote">
+                <img src="<?php echo base_url('assets/logo.png'); ?>" alt="T-Vote">
             </div>
             <div class="menu">
-                <a href="<?php echo base_url('admin/EventVote'); ?>" class="menu-item active">Kelola Event Vote</a>
+                <a href="<?php echo base_url('EventVote'); ?>" class="menu-item active">Kelola Event Vote</a>
                 <a href="<?php echo base_url('admin/pembelian'); ?>" class="menu-item">Kelola Pembelian</a>
                 <a href="<?php echo base_url('admin/admin_user'); ?>" class="menu-item">Kelola Admin</a>
-				<a href="<?php echo base_url('admin/admin_voters'); ?>" class="menu-item">Kelola User</a>
+                <a href="<?php echo base_url('admin/admin_voters'); ?>" class="menu-item">Kelola User</a>
                 <a href="<?php echo base_url('admin/hasil_voting'); ?>" class="menu-item">Hasil Voting</a>
             </div>
             <a href="<?php echo base_url('auth/login_admin'); ?>" class="menu-item logout-button"><i class="mdi mdi-logout" style="margin-right: 10px;"></i>Keluar</a>
         </div>
 
-		<div class="container">
-			<div class="judul">
+        <div class="container">
+            <div class="judul">
                 <h2 style="font-weight: bold;">Kelola Event</h2>
             </div>
             <div class="event-management">
-                <div >
+                <div>
                     <a href="#" id="show-event-vote" class="event-option" style="font-weight: bold;">Daftar Event Vote</a>
                 </div>
-                <div >
+                <div>
                     <a href="#" id="show-kandidat" class="event-option" style="font-weight: bold;">Daftar Kandidat</a>
                 </div>
             </div>
 
-
-
-			<div id="daftar-event-vote" class="container mt-5 mb-5 section active">
+            <div id="daftar-event-vote" class="container mt-5 mb-5 section active">
                 <div class="container-tabel" style="margin-left: 42px;">
-					<h2 style="font-weight: bold;">Daftar Event Vote</h2>
-						<div class="table-responsive">
-							<table class="table" id="table-event-vote">
-								<thead>
-									<tr>
-										<th scope="col">Nama Kategori</th>
-										<th scope="col">Deskripsi</th>
-										<th scope="col">Aksi</th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php foreach($EventVote as $k): ?>
-									<tr>
-										<td><?php echo $k['nama_event']; ?></td>
-										<td><?php echo $k['deskripsi']; ?></td>
-										<td>
-											<a href="<?php echo base_url('admin/editEventVote/'.$k['id']); ?>" class="btn-edit btn-primary">Ubah</a>
-											<a href="<?php echo base_url('admin/hapusEventVote/'.$k['id']); ?>" class="btn-hapus btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus Event Vote ini?')">Hapus</a>
-										</td>
-									</tr>
-									<?php endforeach; ?>
-								</tbody>
-							</table>
-						</div>
-					<a href="<?php echo base_url('admin/tambahEventVote'); ?>" class="btn-tambah">Tambah Event Vote</a>
-				</div>
-			</div>
+                    <h2 style="font-weight: bold;">Daftar Event Vote</h2>
+                    <div class="table-responsive">
+                        <table class="table" id="table-event-vote">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nama Kategori</th>
+                                    <th scope="col">Deskripsi</th>
+                                    <th scope="col">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach($EventVote as $k): ?>
+                                <tr>
+                                    <td><?php echo $k['nama_event']; ?></td>
+                                    <td><?php echo $k['deskripsi']; ?></td>
+                                    <td>
+                                        <a href="<?php echo base_url('admin/editEventVote/'.$k['id']); ?>" class="btn-edit btn-primary">Ubah</a>
+                                        <a href="<?php echo base_url('admin/hapusEventVote/'.$k['id']); ?>" class="btn-hapus btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus Event Vote ini?')">Hapus</a>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="<?php echo base_url('admin/tambahEventVote'); ?>" class="btn-tambah">Tambah Event Vote</a>
+                </div>
+            </div>
 
-			<div id="daftar-kandidat" class="container mt-5 mb-5 section">
-				<div class="container-tabel" style="margin-left: 42px;">
-					<h2 style="font-weight: bold;">Daftar Kandidat</h2>
-						<div class="table-responsive">
-							<table class="table" id="table-kandidat">
-								<thead>
-									<tr>
-										<th scope="col">ID Kandidat</th>
-										<th scope="col">Foto Kandidat</th>
-										<th scope="col">Nama Kandidat</th>
-										<th scope="col">Nama Kategori</th>
-										<th scope="col">Visi Misi</th>
-										<th scope="col">Aksi</th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php foreach($kandidat as $k): ?>
-									<tr>
-										<td><?php echo $k['id']; ?></td>
-										<td><img src="../foto_kandidat/<?php echo $k['foto_kandidat']; ?>" width="100" height="100" alt=""></td>
-										<td><?php echo $k['nama']; ?></td>
-										<td><?php echo $k['nama_event']; ?></td>
-										<td><?php echo $k['visi_misi']; ?></td>
-										<td>
-										<div class="btn-group">
-											<a href="<?php echo base_url('admin/editKandidatEventVote/'.$k['id']); ?>" class="btn-edit btn-primary">Ubah</a>
-											<a href="<?php echo base_url('admin/hapusKandidatEventVote/'.$k['id']); ?>" class="btn-hapus btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus kandidat ini?')">Hapus</a>
-										</div>
-										</td>
-									</tr>
-									<?php endforeach; ?>
-								</tbody>
-							</table>
-						</div>
-						<a href="<?php echo base_url('admin/tambahKandidatEventVote'); ?>" class="btn-tambah">Tambah Kandidat</a> 
-				</div>
-			</div>
-<script>
-    $(document).ready(function() {
-    $('#show-event-vote').click(function() {
-        $('.section').removeClass('active');
-        $('#daftar-event-vote').addClass('active');
-        $('.event-option').removeClass('active');
-        $(this).addClass('active');
-    });
+            <div id="daftar-kandidat" class="container mt-5 mb-5 section">
+                <div class="container-tabel" style="margin-left: 42px;">
+                    <h2 style="font-weight: bold;">Daftar Kandidat</h2>
+                    <div class="table-responsive">
+                        <table class="table" id="table-kandidat">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID Kandidat</th>
+                                    <th scope="col">Foto Kandidat</th>
+                                    <th scope="col">Nama Kandidat</th>
+                                    <th scope="col">Nama Kategori</th>
+                                    <th scope="col">Visi Misi</th>
+                                    <th scope="col">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach($kandidat as $k): ?>
+                                <tr>
+                                    <td><?php echo $k['id']; ?></td>
+                                    <td><img src="<?php echo base_url('foto_kandidat/'.$k['foto_kandidat']); ?>" width="100" height="100" alt=""></td>
+                                    <td><?php echo $k['nama']; ?></td>
+                                    <td><?php echo $k['nama_event']; ?></td>
+                                    <td><?php echo $k['visi_misi']; ?></td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="<?php echo base_url('admin/editKandidatEventVote/'.$k['id']); ?>" class="btn-edit btn-primary">Ubah</a>
+                                            <a href="<?php echo base_url('admin/hapusKandidatEventVote/'.$k['id']); ?>" class="btn-hapus btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus kandidat ini?')">Hapus</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="<?php echo base_url('admin/tambahKandidatEventVote'); ?>" class="btn-tambah">Tambah Kandidat</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    $('#show-kandidat').click(function() {
-        $('.section').removeClass('active');
-        $('#daftar-kandidat').addClass('active');
-        $('.event-option').removeClass('active');
-        $(this).addClass('active');
-    });
-});
-</script>
+    <script>
+        $(document).ready(function() {
+            $('#show-event-vote').click(function() {
+                $('.section').removeClass('active');
+                $('#daftar-event-vote').addClass('active');
+                $('.event-option').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            $('#show-kandidat').click(function() {
+                $('.section').removeClass('active');
+                $('#daftar-kandidat').addClass('active');
+                $('.event-option').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
 </body>
 </html>
