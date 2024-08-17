@@ -106,6 +106,36 @@
         margin-top: 5px;
     }
     
+		/* Media query for responsiveness */
+		@media (max-width: 768px) {
+		.form-container {
+			width: 100%;
+			padding: 20px;
+			margin-left: 0;
+			max-width: 100%;
+		}
+		.card-title {
+			font-size: 20px;
+			margin-left: 160px;
+			margin-right: 180px;
+			text-align: center;
+		}
+		.card {
+			margin: 0;
+			padding: 10px;
+		}
+		.form-control {
+			padding: 10px;
+			height: auto;
+		}
+		.btn-custom {
+			font-size: 16px;
+			padding: 10px;
+		}
+		.illustration {
+			display: none;
+		}
+	}
 </style>
 </head>
 <body>

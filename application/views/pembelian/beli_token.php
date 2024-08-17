@@ -44,6 +44,7 @@
             width: 60%;
             margin-bottom: 50px;
             margin-left: 50px;
+			margin-right: 50px;
         }
 
         .menu {
@@ -65,7 +66,7 @@
             text-align: center;
             font-size: 16px;
             font-weight: bold;
-            width: 100%;
+            width: 80%;
         }
 
         .menu-item:hover {
@@ -90,6 +91,7 @@
 
         .logout-button {
             margin-bottom: 40px; 
+			margin-top: 357px;
             width: 80%;
         }
 
@@ -110,7 +112,7 @@
         .header {
             position: absolute;
             top: 20px;
-            right: 50px;
+            right: 20px;
             display: flex;
             align-items: center;
         }
@@ -218,24 +220,87 @@
             align-items: center;
         }
 		
+		/* CSS for mobile view */
+		@media screen and (max-width: 768px) {
+
+			.sidebar {
+				display: none; 
+				position: fixed;
+				top: 0; 
+				left: 0; 
+				width: 300px;
+				height: 100vh;
+				background-color: #ffffff;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding-top: 50px;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+				transition: transform 0.3s ease-in-out;
+				z-index: 999; 
+			}
+
+			.sidebar.open {
+				display: flex; 
+				transform: translateX(0);
+			}
+
+			.sidebar.closed {
+				display: none; 
+				transform: translateX(-100%);
+			}
+
+			.menu-icon {
+				position: fixed;
+				top: 20px;
+				left: 20px;
+				cursor: pointer;
+				font-size: 30px;
+				color: #000000;
+				z-index: 1000;
+			}
+
+			.logout-button {
+				margin-top: auto; 
+				margin-bottom: 40px; 
+				width: 80%;
+			}
+
+		}
+
+		/* CSS for desktop view */
+		@media screen and (min-width: 769px) {
+			.menu-icon {
+				display: none;
+			}
+
+			.menu {
+				display: flex;
+			}
+		}
     </style>
 </head>
 <body>
 <div class="main">
-    <div class="sidebar">
-        <div class="logo">
-            <img src="../assets/logo.png" alt="T-Vote">
+	<div class="sidebar-container">
+		<div class="menu-icon">
+            <i class="fas fa-bars"></i>
         </div>
-        <div class="menu">
-            <a href="<?php echo base_url('Voting'); ?>" class="menu-item"> <i class="fas fa-vote-yea" style="margin-right: 10px;"></i>Vote</a>
-            <a href="<?php echo base_url('pembelian/beli_token'); ?>" class="menu-item active"> <i class="fas fa-shopping-cart" style="margin-right: 10px;"></i>Beli Token</a>
-        </div>
-        <a href="<?php echo base_url('auth/logout'); ?>" class="menu-item logout-button"><i class="mdi mdi-logout" style="margin-right: 10px;"></i>Keluar</a>
-    </div>
+		<div class="sidebar">
+			<div class="logo">
+				<img src="../assets/logo.png" alt="T-Vote">
+			</div>
+			<div class="menu">
+				<a href="<?php echo base_url('Voting'); ?>" class="menu-item"> <i class="fas fa-vote-yea" style="margin-right: 10px;"></i>Vote</a>
+				<a href="<?php echo base_url('pembelian/beli_token'); ?>" class="menu-item active"> <i class="fas fa-shopping-cart" style="margin-right: 10px;"></i>Beli Token</a>
+				<a href="<?php echo base_url('auth/logout'); ?>" class="menu-item logout-button"><i class="mdi mdi-logout" style="margin-right: 10px;"></i>Keluar</a>
+			</div>
+		</div>
+	</div>	
     
     <div class="container mt-5">
         <div class="header">
-            <span>Selamat Datang, <?php echo $this->session->userdata('username'); ?></span> 
+            <span>Hi, <?php echo $this->session->userdata('username'); ?></span> 
             <div class="profile-circle"></div>
         </div>
         <div class="row">
@@ -295,6 +360,17 @@
             }
         });
     });
+
+	document.querySelector('.menu-icon').addEventListener('click', function () {
+    var sidebar = document.querySelector('.sidebar');
+    if (sidebar.classList.contains('open')) {
+        sidebar.classList.remove('open');
+        sidebar.classList.add('closed');
+    } else {
+        sidebar.classList.remove('closed');
+        sidebar.classList.add('open');
+    }
+});
 </script>
 </body>
 </html>

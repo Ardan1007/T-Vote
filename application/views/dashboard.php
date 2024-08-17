@@ -25,17 +25,19 @@
             color: #FFFFFF;
             padding: 40px 40px; 
             height: 100vh; 
+            flex-wrap: wrap; 
         }
         .content {
             flex: 1;
             padding: 40px;
             max-width: 600px;
             margin-top: 20px; 
+            z-index: 1;
         }
         .content h2 {
             font-size: 2em;
             font-weight: bold;
-			text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
         .content p {
             font-size: 1.2em;
@@ -71,15 +73,15 @@
             transform: scale(1);
             color: #000000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-		}
+        }
         .illustration {
             margin-left: 40px;
+            z-index: 1;
         }
         .illustration img {
             width: 700px;
         }
         .header {
-			
             position: absolute;
             top: 20px;
             left: 50px;
@@ -107,6 +109,41 @@
             color: #000000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
+
+        @media (max-width: 768px) {
+            body {
+                overflow: auto; 
+            }
+            .landing-container {
+                padding: 20px;
+                height: auto; 
+            }
+            .content {
+                padding: 20px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .content p {
+                width: 100%;
+                text-align: center;
+            }
+            .illustration {
+                margin-left: 0;
+                margin-top: 20px;
+                text-align: center;
+            }
+            .illustration img {
+                width: 100%;
+                max-width: 400px; 
+            }
+            .header {
+                left: 20px;
+                right: 20px;
+            }
+            .header img {
+                height: 40px; 
+            }
+        }
     </style>
 </head>
 <body>
@@ -117,7 +154,7 @@
         <?php } ?>
     </div>
     <div class="landing-container">
-        <div class="content">
+        <div class="content mt-5">
             <h2>Selamat Datang di T-Vote</h2>
             <p>
                 Dengan hanya beberapa klik, Anda bisa menyuarakan pendapat dan memberikan dukungan pada kandidat atau pilihan yang Anda percaya. Mari bersama-sama membentuk masa depan yang lebih baik.

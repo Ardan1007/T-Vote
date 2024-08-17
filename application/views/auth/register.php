@@ -11,7 +11,6 @@
     <script src="<?php echo base_url('bootstrap/js/bootstrap.min.js'); ?>"></script>
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Tambahkan Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <title>T-Vote | Daftar</title>
@@ -102,6 +101,37 @@
             margin-bottom: 20px;
             text-align: center;
         }
+
+		/* Media query for responsiveness */
+	@media (max-width: 768px) {
+		.form-container {
+			width: 100%;
+			padding: 20px;
+			margin-left: 0;
+			max-width: 100%;
+		}
+		.card-title {
+			font-size: 20px;
+			margin-left: 160px;
+			margin-right: 180px;
+			text-align: center;
+		}
+		.card {
+			margin: 0;
+			padding: 10px;
+		}
+		.form-control {
+			padding: 10px;
+			height: auto;
+		}
+		.btn-custom {
+			font-size: 16px;
+			padding: 10px;
+		}
+		.illustration {
+			display: none;
+		}
+	}
     </style>
 	
 </head>
